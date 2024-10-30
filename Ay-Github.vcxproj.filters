@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="header">
+      <UniqueIdentifier>{08cf9b1c-6976-40c6-86a1-a1eea0b5fa63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{c920285f-c405-436c-96b3-9301c06c232b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib">
+      <UniqueIdentifier>{38ea8db0-5d06-413f-8139-eb0986f1f37a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="header\Color.hpp">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Concepts.hpp">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Config.hpp">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Time.hpp">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Utility.hpp">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Vector2.hpp">
+      <Filter>header</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Time.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
