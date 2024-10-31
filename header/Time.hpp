@@ -5,8 +5,9 @@
 	@date 2024/10/30
 */
 #pragma once
-#include "../header/Utility.hpp"
-#include "../header/Concepts.hpp"
+#include "Utility.hpp"
+#include "Concepts.hpp"
+
 
 namespace Ay {
 	/*
