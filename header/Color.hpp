@@ -1,10 +1,10 @@
 /*
     @file Color.hpp
     @author Ay
-    @date 2024/10/30
+    @date 2024/11/01
 */
 #pragma once
-#include "Config.hpp"
+#include <array>
 #include "Utility.hpp"
 
 namespace Ay {
@@ -77,6 +77,5 @@ namespace Ay {
         NODISCARD static constexpr uInt white() noexcept {
             return 0xffffff;
         }
-
     };
 }

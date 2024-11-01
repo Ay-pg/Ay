@@ -1,7 +1,7 @@
 /*
 	@file Utility.hpp
 	@author Ay
-	@date 2024/10/31
+	@date 2024/11/01
 */
 #pragma once
 #include <iostream>
@@ -13,14 +13,16 @@
 #include <cmath>
 #include <thread>
 #include <chrono>
-#include <random>
 #include <functional>
+
+
+#include "Config.hpp"
 
 namespace Ay {
 	using cInt = const int;
 	using pInt = int*;
 	using uInt = unsigned int;
-	using Int = int;
+	using int32 = int;
 
 	using pcChar = const char*;
 	using stringView = std::string_view;
@@ -30,7 +32,4 @@ namespace Ay {
 	using std::endl;
 
 	using std::function;
-
-	using namespace std::chrono;
-	using namespace std::this_thread;
 }

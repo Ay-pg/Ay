@@ -18,6 +18,23 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Time.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="header\Color.hpp" />
+    <ClInclude Include="header\Concepts.hpp" />
+    <ClInclude Include="header\Config.hpp" />
+    <ClInclude Include="header\Debug.hpp" />
+    <ClInclude Include="header\Random.hpp" />
+    <ClInclude Include="header\Time.hpp" />
+    <ClInclude Include="header\Utility.hpp" />
+    <ClInclude Include="header\Vector2.hpp" />
+    <ClInclude Include="header\Window.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -107,11 +124,15 @@
       <LanguageStandard>stdcpp20</LanguageStandard>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:\Ay\Ay-Github\Ay-Github\lib\DxLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>C:\Ay\Ay-Github\Ay-Github\lib\DxLib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -124,6 +145,7 @@
       <LanguageStandard>stdcpp20</LanguageStandard>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:\Ay\Ay-Github\Ay-Github\lib\DxLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -131,18 +153,10 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>C:\Ay\Ay-Github\Ay-Github\lib\DxLib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="header\Color.hpp" />
-    <ClInclude Include="header\Concepts.hpp" />
-    <ClInclude Include="header\Config.hpp" />
-    <ClInclude Include="header\Time.hpp" />
-    <ClInclude Include="header\Utility.hpp" />
-    <ClInclude Include="header\Vector2.hpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="src\Time.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

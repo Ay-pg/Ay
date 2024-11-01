@@ -12,6 +12,11 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Time.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
     <ClInclude Include="header\Color.hpp">
       <Filter>header</Filter>
     </ClInclude>
@@ -19,6 +24,9 @@
       <Filter>header</Filter>
     </ClInclude>
     <ClInclude Include="header\Config.hpp">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Random.hpp">
       <Filter>header</Filter>
     </ClInclude>
     <ClInclude Include="header\Time.hpp">
@@ -30,10 +38,14 @@
     <ClInclude Include="header\Vector2.hpp">
       <Filter>header</Filter>
     </ClInclude>
+    <ClInclude Include="header\Debug.hpp">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Window.hpp">
+      <Filter>header</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Time.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
+    <None Include="cpp.hint" />
   </ItemGroup>
 </Project>

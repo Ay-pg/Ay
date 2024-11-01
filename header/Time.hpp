@@ -17,7 +17,7 @@ namespace Ay {
 	class Time {
 	private:
 		float timeScale;   // タイムスケール
-		steady_clock::time_point deltaTimer; // 時刻保存用
+		std::chrono::steady_clock::time_point deltaTimer; // 時刻保存用
 	public:
 		/*
 			@brief コンストラクタ
@@ -45,7 +45,7 @@ namespace Ay {
 		*/
 		template <Floating T>
 		static void WaitForSeconds(T sec) {
-			sleep_for(duration<T>(sec));
+			std::this_thread::sleep_for(duration<T>(sec));
 		}
 	};
 }
