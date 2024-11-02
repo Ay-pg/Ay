@@ -14,8 +14,6 @@
 #include <thread>
 #include <chrono>
 #include <functional>
-
-
 #include "Config.hpp"
 
 namespace Ay {

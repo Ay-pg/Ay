@@ -3,3 +3,5 @@
 // 詳細については次を参照してください https://go.microsoft.com/fwlink/?linkid=865984
 #define NODISCARD_CPP20 [[nodiscard]]
 #define NODISCARD_CPP20
+#define NODISCARD [[nodiscard]]
+#define NODISCARD

@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Input.cpp" />
     <ClCompile Include="src\Time.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -26,6 +27,7 @@
     <ClInclude Include="header\Concepts.hpp" />
     <ClInclude Include="header\Config.hpp" />
     <ClInclude Include="header\Debug.hpp" />
+    <ClInclude Include="header\Input.hpp" />
     <ClInclude Include="header\Random.hpp" />
     <ClInclude Include="header\Time.hpp" />
     <ClInclude Include="header\Utility.hpp" />
