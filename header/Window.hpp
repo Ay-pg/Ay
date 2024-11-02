@@ -50,6 +50,9 @@ namespace Ay {
             ChangeWindowMode(mode);
         }
         // @brief ウィンドウのサイズ変更
+        // @param width 横幅
+        // @param height 縦幅
+        // @param bit カラービット
         void Resize(int32 width, int32 height, int32 bit) noexcept {
             Window::width = width;
             Window::height = height;

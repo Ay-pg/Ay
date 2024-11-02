@@ -69,7 +69,7 @@ namespace Ay {
 		Mid  = 0x0004,  // 真ん中
 		Right = 0x0002, // 右 
 	};
-    // @brief キーボード、マウスの入力管理
+    // @brief キーボード、マウスの入力を管理
     class Input final {
     private:
         Input() = default;
