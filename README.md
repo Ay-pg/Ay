@@ -5,4 +5,5 @@
 - VisualStudio2022  
 - Windows10  
 ## 使用している外部ライブラリ
+[DxLib] https://dxlib.xsrv.jp/  
 [nlohmann json] https://github.com/nlohmann/json
