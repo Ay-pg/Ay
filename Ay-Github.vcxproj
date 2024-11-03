@@ -19,17 +19,23 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\GameObject.cpp" />
     <ClCompile Include="src\Input.cpp" />
+    <ClCompile Include="src\Object.cpp" />
     <ClCompile Include="src\Time.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header\Color.hpp" />
+    <ClInclude Include="header\Component.hpp" />
     <ClInclude Include="header\Concepts.hpp" />
     <ClInclude Include="header\Config.hpp" />
     <ClInclude Include="header\Debug.hpp" />
+    <ClInclude Include="header\GameObject.hpp" />
     <ClInclude Include="header\Input.hpp" />
+    <ClInclude Include="header\Object.hpp" />
     <ClInclude Include="header\Random.hpp" />
     <ClInclude Include="header\Time.hpp" />
+    <ClInclude Include="header\Transform.hpp" />
     <ClInclude Include="header\Utility.hpp" />
     <ClInclude Include="header\Vector2.hpp" />
     <ClInclude Include="header\Window.hpp" />
