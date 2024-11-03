@@ -9,7 +9,8 @@
 
 namespace Ay {
     namespace OrderList {
-        constexpr int32 TRANSFORM = 1;   // Transform (1)
+        constexpr int32 TRANSFORM = 1; // Transform (1)
+        constexpr int32 TEXT = 2;      // Text (2)
     }
     class Object;
     // @class Component

@@ -19,7 +19,7 @@ namespace Ay {
         NODISCARD_CPP20 GameObject() noexcept = default;
         // @brief コンストラクタ
         // @param name ゲームオブジェクトの名前
-        NODISCARD_CPP20 explicit constexpr GameObject(stringView name) noexcept;
+        NODISCARD_CPP20 GameObject(stringView name) noexcept;
         // @brief デフォルトデストラクタ
         virtual ~GameObject() = default;
         // @brief 初期化処理

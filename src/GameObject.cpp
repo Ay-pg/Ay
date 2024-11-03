@@ -3,16 +3,16 @@
 namespace Ay {
 	uInt GameObject::createCount = 0;
 
-	constexpr GameObject::GameObject(stringView name) noexcept : Object(name) {
-		Ready();
+	GameObject::GameObject(stringView name) noexcept : Object(name), id(0) {
 	}
 
 	void GameObject::Ready() {
+		Object::Ready();
 		++createCount;
 		id = createCount;
 	}
 
-	void GameObject::Update(float deltaTime = 0.f) {
+	void GameObject::Update(float deltaTime) {
 		Object::Update(deltaTime);
 	}
 

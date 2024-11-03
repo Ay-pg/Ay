@@ -24,7 +24,7 @@ namespace Ay {
 		NODISCARD_CPP20 Object() noexcept = default;
 		// @brief コンストラクタ
 		// @param name オブジェクトの名前
-		NODISCARD_CPP20 explicit constexpr Object(stringView name) noexcept;
+		NODISCARD_CPP20 Object(stringView name) noexcept;
 		// @brief デストラクタ
 		virtual ~Object() noexcept = default;
 		// @brief 初期化処理

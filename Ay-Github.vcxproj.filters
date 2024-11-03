@@ -21,6 +21,9 @@
     <ClCompile Include="src\GameObject.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\Text.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header\Color.hpp">
@@ -63,6 +66,15 @@
       <Filter>header</Filter>
     </ClInclude>
     <ClInclude Include="header\GameObject.hpp">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="header\ObjectManager.hpp">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DxWrapper.hpp">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Text.hpp">
       <Filter>header</Filter>
     </ClInclude>
   </ItemGroup>

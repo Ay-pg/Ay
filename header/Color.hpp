@@ -1,7 +1,7 @@
 /*
     @file Color.hpp
     @author Ay
-    @date 2024/11/01
+    @date 2024/11/03
 */
 #pragma once
 #include <array>
@@ -18,64 +18,58 @@ namespace Ay {
         static constexpr uInt MAX = 255u; // 最大値
 
         NODISCARD_CPP20 Color() noexcept = default;
-
         NODISCARD_CPP20 Color(const Color&) noexcept = default;
 
-        NODISCARD_CPP20 constexpr Color(uInt r = 255u, uInt g = 255u, uInt b = 255u, uInt a = 255u) : r(r), g(g), b(b), a(a) {
-            std::array<uInt, 4> rgba = { r,g,b,a };
-            for (auto& col : rgba) {
-                if (col < MIN || col > MAX) {
-                    col = std::clamp(col, MIN, MAX);
-                }
-            }
+        NODISCARD_CPP20 constexpr Color(uInt r = 255u, uInt g = 255u, uInt b = 255u, uInt a = 255u)
+            : r(std::clamp(r, MIN, MAX)), g(std::clamp(g, MIN, MAX)), b(std::clamp(b, MIN, MAX)), a(std::clamp(a, MIN, MAX)) {
         }
         // @return 16進数値にして返す
         NODISCARD constexpr uInt ToUInt() const noexcept {
             return (r << 16) | (g << 8) | b;
         }
-        // @return 赤のカラーコード
-        NODISCARD static constexpr uInt red() noexcept {
-            return 0xff0000;
+        // @return color red
+        NODISCARD static constexpr Color red() noexcept {
+            return Color(255, 0, 0);
         }
-        // @return 緑のカラーコード
-        NODISCARD static constexpr uInt green() noexcept {
-            return 0x00ff00;
+        // @return color green
+        NODISCARD static constexpr Color green() noexcept {
+            return Color(0, 255, 0);
         }
-        // @return 青のカラーコード
-        NODISCARD static constexpr uInt blue() noexcept {
-            return 0x0000ff;
+        // @return color blue
+        NODISCARD static constexpr Color blue() noexcept {
+            return Color(0, 0, 255);
         }
-        // @return 黄のカラーコード
-        NODISCARD static constexpr uInt yellow() noexcept {
-            return 0xffff00;
+        // @return color yellow
+        NODISCARD static constexpr Color yellow() noexcept {
+            return Color(255, 255, 0);
         }
-        // @return マゼンタのカラーコード
-        NODISCARD static constexpr uInt magenta() noexcept {
-            return 0xff00ff;
+        // @return color magenta
+        NODISCARD static constexpr Color magenta() noexcept {
+            return Color(255, 0, 255);
         }
-        // @return シアンのカラーコード
-        NODISCARD static constexpr uInt cyan() noexcept {
-            return 0x00ffff;
+        // @return color cyan
+        NODISCARD static constexpr Color cyan() noexcept {
+            return Color(0, 255, 255);
         }
-        // @return オレンジのカラーコード
-        NODISCARD static constexpr uInt orange() noexcept {
-            0xffa500;
+        // @return color orange
+        NODISCARD static constexpr Color orange() noexcept {
+            return Color(255, 165, 0);
         }
-        // @return パープルのカラーコード
-        NODISCARD static constexpr uInt purple() noexcept {
-            return 0x800080;
+        // @return color purple
+        NODISCARD static constexpr Color purple() noexcept {
+            return Color(128, 0, 128);
         }
-        // @return グレーのカラーコード
-        NODISCARD static constexpr uInt gray() noexcept {
-            return 0x7d7d7d;
+        // @return color gray
+        NODISCARD static constexpr Color gray() noexcept {
+            return Color(125, 125, 125);
         }
-        // @return 黒のカラーコード
-        NODISCARD static constexpr uInt black() noexcept {
-            return 0x000000;
+        // @return color black
+        NODISCARD static constexpr Color black() noexcept {
+            return Color(0, 0, 0);
         }
-        // @return 白のカラーコード
-        NODISCARD static constexpr uInt white() noexcept {
-            return 0xffffff;
+        // @return color white
+        NODISCARD static constexpr Color white() noexcept {
+            return Color(255, 255, 255);
         }
     };
 }

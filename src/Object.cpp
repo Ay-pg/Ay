@@ -1,21 +1,21 @@
 #include "../header/Object.hpp"
 
 namespace Ay {
-	constexpr Object::Object(stringView name) noexcept : name(name) {
-		Ready();
+	Object::Object(stringView name) noexcept : name(name),IsActive(false) {
 	}
-	void Object::Ready() noexcept {
+
+	void Object::Ready() {
 		// TODO: Transform,Sprite ‚Ì‰Šú‰»ˆ—‚ð’Ç‰Á
 
 	}
 
-	void Object::Update(float deltaTime = 0.f) noexcept {
+	void Object::Update(float deltaTime) {
 		for (const auto& comp : components) {
 			comp.second->Update(deltaTime);
 		}
 	}
 
-	void Object::Draw() const noexcept {
+	void Object::Draw() const {
 		for (const auto& comp : components) {
 			comp.second->Draw();
 		}

@@ -23,20 +23,6 @@ namespace Ay {
             : Component(), position(Vector2::zero()), scale(0.f), angle(0.f) {
             Ready();
         }
-        // @brief コンストラクタ
-        // @param pos 座標
-        // @param scale スケール
-        // @param angle 角度
-        NODISCARD_CPP20 explicit constexpr Transform(const Vector2& pos, double scale, double angle)
-            : Component(), position(pos), scale(scale), angle(angle) {
-            Ready();
-        }
-        // @brief コピーコンストラクタ
-        // @brief other コピー元の Transform
-        NODISCARD_CPP20 explicit constexpr Transform(const Transform& other)
-            : Component(), position(other.position), scale(other.scale), angle(other.angle) {
-            Ready();
-        }
         // @brief デフォルトデストラクタ
         virtual ~Transform() = default;
         // @brief 初期化処理
@@ -45,10 +31,10 @@ namespace Ay {
         }
         // @brief 更新処理
         // @param deltaTime 経過時間
-        virtual void Update(float deltaTime = 0.f) noexcept override {
+        virtual void Update(float deltaTime) override {
         }
         // @brief 描画処理
-        virtual void Draw() const noexcept override {
+        virtual void Draw() const override {
         }
         // @brief 座標をセットする
         // @brief other セットしたい座標
