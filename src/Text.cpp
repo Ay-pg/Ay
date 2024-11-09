@@ -8,7 +8,7 @@ namespace Ay {
 	}
 
     void Text::Ready() {
-        SetOrder(2);
+		SetOrder(OrderList::TEXT);
     }
 
 	void Text::Draw() const {

@@ -19,8 +19,8 @@ namespace Ay {
         double angle;     // 角度
     public:
         // @brief コンストラクタ
-        NODISCARD_CPP20 constexpr Transform()
-            : Component(), position(Vector2::zero()), scale(0.f), angle(0.f) {
+        NODISCARD_CPP20 Transform(std::shared_ptr<GameObject> owner)
+            : Component(owner), position(Vector2::zero()), scale(0.f), angle(0.f) {
             Ready();
         }
         // @brief デフォルトデストラクタ

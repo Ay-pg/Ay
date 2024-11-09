@@ -1,22 +1,25 @@
 #include "../header/GameObject.hpp"
 
 namespace Ay {
-	uInt GameObject::createCount = 0;
+	GameObject::GameObject(stringView name) noexcept : Object(name), IsActive(false) {
 
-	GameObject::GameObject(stringView name) noexcept : Object(name), id(0) {
 	}
 
 	void GameObject::Ready() {
-		Object::Ready();
-		++createCount;
-		id = createCount;
+		transform = AddComponent<Transform>();
+		transform->Ready();
+		// TODO: Component Sprite ‚ð‰Šú‰»
 	}
 
 	void GameObject::Update(float deltaTime) {
-		Object::Update(deltaTime);
+		for (const auto& component : orderComponents) {
+			component->Update(deltaTime);
+		}
 	}
 
 	void GameObject::Draw() const {
-		Object::Draw();
+		for (const auto& component : orderComponents) {
+			component->Draw();
+		}
 	}
 }

@@ -19,30 +19,37 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\BoxCollider.cpp" />
+    <ClCompile Include="src\FpsControll.cpp" />
     <ClCompile Include="src\GameObject.cpp" />
+    <ClCompile Include="src\GameObjectManager.cpp" />
     <ClCompile Include="src\Input.cpp" />
     <ClCompile Include="src\Object.cpp" />
+    <ClCompile Include="src\SceneManager.cpp" />
     <ClCompile Include="src\Text.cpp" />
     <ClCompile Include="src\Time.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="header\BoxCollider.hpp" />
     <ClInclude Include="header\Color.hpp" />
     <ClInclude Include="header\Component.hpp" />
     <ClInclude Include="header\Concepts.hpp" />
     <ClInclude Include="header\Config.hpp" />
     <ClInclude Include="header\Debug.hpp" />
+    <ClInclude Include="header\FpsControll.hpp" />
     <ClInclude Include="header\GameObject.hpp" />
     <ClInclude Include="header\Input.hpp" />
     <ClInclude Include="header\Object.hpp" />
-    <ClInclude Include="header\ObjectManager.hpp" />
+    <ClInclude Include="header\GameObjectManager.hpp" />
     <ClInclude Include="header\Random.hpp" />
+    <ClInclude Include="header\Scene.hpp" />
+    <ClInclude Include="header\SceneManager.hpp" />
     <ClInclude Include="header\Text.hpp" />
     <ClInclude Include="header\Time.hpp" />
     <ClInclude Include="header\Transform.hpp" />
     <ClInclude Include="header\Utility.hpp" />
     <ClInclude Include="header\Vector2.hpp" />
     <ClInclude Include="header\Window.hpp" />
-    <ClInclude Include="src\DxWrapper.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp.hint" />

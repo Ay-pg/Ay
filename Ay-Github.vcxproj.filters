@@ -24,6 +24,18 @@
     <ClCompile Include="src\Text.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\SceneManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FpsControll.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameObjectManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BoxCollider.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header\Color.hpp">
@@ -68,13 +80,22 @@
     <ClInclude Include="header\GameObject.hpp">
       <Filter>header</Filter>
     </ClInclude>
-    <ClInclude Include="header\ObjectManager.hpp">
-      <Filter>header</Filter>
-    </ClInclude>
-    <ClInclude Include="src\DxWrapper.hpp">
+    <ClInclude Include="header\GameObjectManager.hpp">
       <Filter>header</Filter>
     </ClInclude>
     <ClInclude Include="header\Text.hpp">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Scene.hpp">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="header\SceneManager.hpp">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="header\FpsControll.hpp">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="header\BoxCollider.hpp">
       <Filter>header</Filter>
     </ClInclude>
   </ItemGroup>

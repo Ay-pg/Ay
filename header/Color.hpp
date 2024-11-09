@@ -17,9 +17,6 @@ namespace Ay {
         static constexpr uInt MIN = 0u;   // ç≈è¨íl
         static constexpr uInt MAX = 255u; // ç≈ëÂíl
 
-        NODISCARD_CPP20 Color() noexcept = default;
-        NODISCARD_CPP20 Color(const Color&) noexcept = default;
-
         NODISCARD_CPP20 constexpr Color(uInt r = 255u, uInt g = 255u, uInt b = 255u, uInt a = 255u)
             : r(std::clamp(r, MIN, MAX)), g(std::clamp(g, MIN, MAX)), b(std::clamp(b, MIN, MAX)), a(std::clamp(a, MIN, MAX)) {
         }

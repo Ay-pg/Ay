@@ -2,9 +2,10 @@
     @file Component.hpp
     @brief コンポーネントの基底クラス
     @author Ay
-    @date 2024/11/03
+    @date 2024/11/07
 */
 #pragma once
+#include "Object.hpp"
 #include "Utility.hpp"
 
 namespace Ay {
@@ -12,14 +13,20 @@ namespace Ay {
         constexpr int32 TRANSFORM = 1; // Transform (1)
         constexpr int32 TEXT = 2;      // Text (2)
     }
-    class Object;
+    class GameObject;
     // @class Component
     // @brief コンポーネントの基底クラス
-    class Component {
+    class Component : public Object {
     protected:
-        Object* owner = nullptr; // オーナー
+        std::shared_ptr<GameObject> owner; // オーナー
         int32 order = 0; // 優先度
     public:
+        // @brief デフォルトコンストラクタ
+        NODISCARD_CPP20 Component() noexcept = default;
+        // @brief コンストラクタ
+        NODISCARD_CPP20 Component(std::shared_ptr<GameObject> owner) noexcept
+            : Object(typeid(Component).name()), owner(owner) {
+        }
         // @brief デフォルトデストラクタ
         virtual ~Component() noexcept = default;
         // @brief 初期化処理
@@ -29,14 +36,6 @@ namespace Ay {
         virtual void Update(float deltaTime) = 0;
         // @brief 描画処理
         virtual void Draw() const = 0;
-        // @brief オーナーをセットする
-        void SetOwner(Object* other) noexcept {
-            owner = other;
-        }
-        // @return オーナーを返す
-        NODISCARD Object* GetOwner() const noexcept {
-            return owner;
-        }
         // @brief 優先度をセットする
         void SetOrder(int32 other) noexcept {
             order = other;

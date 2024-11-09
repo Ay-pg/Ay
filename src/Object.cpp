@@ -1,23 +1,12 @@
 #include "../header/Object.hpp"
 
 namespace Ay {
-	Object::Object(stringView name) noexcept : name(name),IsActive(false) {
-	}
+	int32 Object::createCount = 0;
 
-	void Object::Ready() {
-		// TODO: Transform,Sprite ‚Ì‰Šú‰»ˆ—‚ð’Ç‰Á
-
-	}
-
-	void Object::Update(float deltaTime) {
-		for (const auto& comp : components) {
-			comp.second->Update(deltaTime);
-		}
-	}
-
-	void Object::Draw() const {
-		for (const auto& comp : components) {
-			comp.second->Draw();
+	Object::Object(stringView name) noexcept : id(0), name(name) {
+		id = ++createCount;
+		if (name.empty()) {
+			this->name = std::string(typeid(Object).name()) + std::to_string(id);
 		}
 	}
 }
